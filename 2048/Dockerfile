@@ -1,7 +1,7 @@
 FROM ubuntu:12.04
 
-RUN yum update
-RUN yum install -y nginx zip curl
+RUN apt-get update -y
+RUN apt-get install -y nginx zip curl
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN curl -o /usr/share/nginx/www/master.zip -L https://codeload.github.com/gabrielecirulli/2048/zip/master
